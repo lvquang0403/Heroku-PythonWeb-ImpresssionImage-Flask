@@ -9,6 +9,13 @@ from flask import Flask, request, jsonify, render_template, send_from_directory,
 UPLOAD_FOLDER = './upload'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/favicon.png')
+
+
 @app.route('/')
 @app.route('/')
 def get_home():
