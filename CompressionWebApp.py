@@ -17,9 +17,9 @@ def favicon():
 
 
 @app.route('/')
-@app.route('/')
+@app.route('/home')
 def get_home():
-    return render_template("index.html")
+    return render_template("index")
 
 @app.route("/test", methods=['POST','GET'])
 def huffman1():
