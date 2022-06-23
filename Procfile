@@ -1,1 +1,1 @@
-web: gunicorn CompressionWebApp.wsgi --log-file -
+web: gunicorn CompressionWebApp:app --log-file -
