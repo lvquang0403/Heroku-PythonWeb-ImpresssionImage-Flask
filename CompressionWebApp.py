@@ -12,7 +12,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def get_home():
-    return "index"
+    return render_template("index.html")
 
 @app.route("/test", methods=['POST','GET'])
 def huffman1():
