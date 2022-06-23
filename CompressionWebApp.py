@@ -1,6 +1,5 @@
 import os
 import sys
-sys.path.append('../Lib/site-packages')
 from huffman import *
 from LZW import *
 from PIL import  Image
@@ -10,7 +9,7 @@ from flask import Flask, request, jsonify, render_template, send_from_directory,
 UPLOAD_FOLDER = './upload'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
+@app.route('/')
 @app.route('/')
 def get_home():
     return render_template("index.html")
