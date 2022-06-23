@@ -1,1 +1,1 @@
-web: gunicorn CompressionWebApp:app --log-file -
+web: gunicorn CompressionWebApp:app
