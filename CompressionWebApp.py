@@ -10,16 +10,9 @@ UPLOAD_FOLDER = './upload'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/favicon.png')
-
-
 @app.route('/')
-@app.route('/home')
 def get_home():
-    return render_template("index")
+    return "index"
 
 @app.route("/test", methods=['POST','GET'])
 def huffman1():
