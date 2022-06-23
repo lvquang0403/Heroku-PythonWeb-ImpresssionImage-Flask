@@ -1,6 +1,3 @@
-import numpy as np
-from PIL import Image
-import os
 def createCompressionDict():
     dictionary = {}
     for i in range(256):
