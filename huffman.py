@@ -1,6 +1,5 @@
 import re
 import os
-from turtle import width
 import numpy as np
 from PIL import Image
 print("Huffman Compression Program")
