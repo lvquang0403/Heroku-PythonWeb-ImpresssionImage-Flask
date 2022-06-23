@@ -1,11 +1,11 @@
 import os
 import sys
-from huffman import *
-from LZW import *
 from PIL import  Image
 import numpy as np
 import cv2
 from flask import Flask, request, jsonify, render_template, send_from_directory,url_for
+from huffman import *
+from LZW import *
 UPLOAD_FOLDER = './upload'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
