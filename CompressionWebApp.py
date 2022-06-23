@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.append('./Lib/site-packages')
+sys.path.append('../Lib/site-packages')
 from huffman import *
 from LZW import *
 from PIL import  Image
@@ -16,7 +16,7 @@ def get_home():
     return render_template("index.html")
 
 @app.route("/test", methods=['POST','GET'])
-def huffman():
+def huffman1():
   if request.method == "POST":
     if 'img' not in request.files:
         return "these is no file"
